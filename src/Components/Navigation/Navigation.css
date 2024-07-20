@@ -1,0 +1,9 @@
+.nav-title img{
+    width: 10px;
+}
+
+@media (min-width: 800px) {
+    .nav-title img {
+        width: 10%;
+    }
+}
