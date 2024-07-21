@@ -1,0 +1,30 @@
+.home-image {
+    width: 200px;
+}
+
+.homeContainer {
+    display: flex;
+
+}
+
+.eventButtonContainer {
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.eventButtons {
+    padding: 10px;
+    margin: auto;
+    width: 100px;
+}
+
+.eventContainer {
+    width: 400px;
+    margin: auto;
+    border: 6px solid red;
+    
+}

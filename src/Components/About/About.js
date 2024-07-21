@@ -6,9 +6,7 @@ import "./About.css";
 function About(props) {
 	return (
 		<div className="about-container text-warning">
-			<h3 className="text-warning">
-				We always want you to feel like a regular!{" "}
-			</h3>
+			<h3 className="text-warning">The best way to do things! </h3>
 			<div className="photo-div">
 				<div>
 					<a

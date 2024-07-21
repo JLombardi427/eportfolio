@@ -7,6 +7,7 @@ import Welcome from "./Components/Welcome/Welcome";
 import Home from "./Components/Home/Home";
 import Navigation from "./Components/Navigation/Navigation";
 import About from "./Components/About/About";
+import EditEvent from "./Components/EditEvent/EditEvent";
 
 export const statesContext = createContext("");
 
@@ -19,6 +20,7 @@ function App() {
 				<Route path="/" element={<Welcome />} />
 				<Route path="/home" element={<Home />} />
 				<Route path="/about" element={<About />} />
+				<Route path="/home/edit" element={<EditEvent />} />
 			</Routes>
 		</div>
 	);

@@ -14,22 +14,22 @@ function Navigation(props) {
 				<Navbar.Brand as={Link} to="/home" className="nav-title">
 					<img src="https://i.imgur.com/xA3zulu.jpg" alt="byo-logo" />
 				</Navbar.Brand>
-				<Navbar.Toggle aria-controls="basic-navbar-nav" />
+
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="ms-auto">
-						<Nav.Link as={Link} to="/menu" className="text-warning">
-							Menu
+						<Nav.Link as={Link} to="/home" className="text-warning">
+							Home
 						</Nav.Link>
-						{loggedIn && (
+						{/* {loggedIn && (
 							<Nav.Link as={Link} to="/profile" className="text-warning">
 								Profile
 							</Nav.Link>
-						)}
+						)} */}
 						<Nav.Link as={Link} to="/about" className="text-warning">
 							About
 						</Nav.Link>
 					</Nav>
-					<Nav>
+					{/* <Nav>
 						{userInfo && (
 							<Navbar.Text className="justify-content-end text-warning fw-bold">
 								You are signed in as: {userInfo.username}
@@ -55,7 +55,7 @@ function Navigation(props) {
 								</LinkContainer>
 							</>
 						)}
-					</Nav>
+					</Nav> */}
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>
