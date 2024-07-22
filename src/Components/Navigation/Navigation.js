@@ -1,62 +1,28 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 import "./Navigation.css";
-import { statesContext } from "../../App";
 
 function Navigation(props) {
-	const { loggedIn, handleLogout, userInfo } = useContext(statesContext);
-
 	return (
 		<Navbar bg="dark" expand="lg" collapseOnSelect={true}>
-			<Container>
+			<Container className="nav-bar">
 				<Navbar.Brand as={Link} to="/home" className="nav-title">
-					<img src="https://i.imgur.com/xA3zulu.jpg" alt="byo-logo" />
+					<h1>Calen-Dos</h1>
 				</Navbar.Brand>
 
-				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="ms-auto">
-						<Nav.Link as={Link} to="/home" className="text-warning">
-							Home
-						</Nav.Link>
-						{/* {loggedIn && (
-							<Nav.Link as={Link} to="/profile" className="text-warning">
-								Profile
-							</Nav.Link>
-						)} */}
-						<Nav.Link as={Link} to="/about" className="text-warning">
-							About
-						</Nav.Link>
-					</Nav>
-					{/* <Nav>
-						{userInfo && (
-							<Navbar.Text className="justify-content-end text-warning fw-bold">
-								You are signed in as: {userInfo.username}
-							</Navbar.Text>
-						)}
-						{loggedIn ? (
-							<>
-								<LinkContainer to="/">
-									<Nav.Link
-										onClick={handleLogout}
-										className="text-danger fw-bold">
-										Log Out
-									</Nav.Link>
-								</LinkContainer>
-							</>
-						) : (
-							<>
-								<LinkContainer to="/signup" className="text-warning">
-									<Nav.Link>Sign Up</Nav.Link>
-								</LinkContainer>
-								<LinkContainer to="/login" className="text-warning">
-									<Nav.Link>Log In</Nav.Link>
-								</LinkContainer>
-							</>
-						)}
-					</Nav> */}
-				</Navbar.Collapse>
+				<Nav className="ms-auto nav-bar">
+					<Nav.Link as={Link} to="/home" className="text-warning">
+						Home
+					</Nav.Link>
+					<Nav.Link as={Link} to="/about" className="text-warning">
+						About
+					</Nav.Link>
+				</Nav>
+				<Link to={"/home/add"}>
+					<Button>Add An Event! </Button>
+				</Link>
 			</Container>
 		</Navbar>
 	);

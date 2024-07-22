@@ -4,6 +4,8 @@
 
 .homeContainer {
     display: flex;
+    justify-content: baseline;
+    
 
 }
 
@@ -26,5 +28,10 @@
     width: 400px;
     margin: auto;
     border: 6px solid red;
+    border-radius: 20px;
     
+}
+
+.addSpan {
+    width: 75%;
 }
