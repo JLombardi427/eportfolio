@@ -80,7 +80,8 @@ function AddEvent(props) {
 							<option selected>Select event category</option>
 							<option value="Birthday">Birthday</option>
 							<option value="Anniversary">Anniversary</option>
-							<option value="Other">Other</option>
+							<option value="Sporting Event">Sporting Event</option>
+							<option value="Other">Other </option>
 						</select>
 					</Form.Group>
 					<div className="text-center">

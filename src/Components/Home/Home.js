@@ -21,6 +21,7 @@ function Home() {
 		"Birthday",
 		"Anniversary",
 		"Sporting Event",
+		"Other",
 	]);
 
 	// Get Events api call function
@@ -51,10 +52,6 @@ function Home() {
 		event.category.includes(filterEvent)
 	);
 
-	const handleNoEvents = () => {
-		return <p>There are not events with this category yet! </p>;
-	};
-
 	useEffect(() => {
 		getEvents();
 	}, []);
@@ -62,32 +59,40 @@ function Home() {
 	return (
 		<div className="homeContainer">
 			<select onChange={(e) => handleCategoryChange(e)}>
-				<option>All</option>
 				{categoryOptions.map((category, key) => (
 					<option value={key}>{category}</option>
 				))}
 			</select>
-			<div className="menu-container mt-3 animate__animated animate__slideInRight">
-				{filteredData.length !== 0
-					? filteredData.map((event, i) => {
-							return (
-								<div className="mb-3 mt-5 ">
-									<Container className="d-flex align-items-center justify-content-center">
-										<EventCard event={event} key={i} />
-									</Container>
-								</div>
-							);
-					  })
-					: events.map((event, i) => {
-							return (
-								<div className="mb-3 mt-5 ">
-									<Container className="d-flex align-items-center justify-content-center">
-										<EventCard event={event} key={i} />
-									</Container>
-								</div>
-							);
-					  })}
-			</div>
+			{filteredData.length === 0 ? (
+				<p>Sorry! There are no events in this category yet! </p>
+			) : (
+				<div>
+					<p>{filteredData[0].category}</p>
+					<div className="cardContainer">
+						<div className="animate__animated animate__slideInRight">
+							{filteredData.length !== 0
+								? filteredData.map((event, i) => {
+										return (
+											<div>
+												<Container>
+													<EventCard event={event} key={i} />
+												</Container>
+											</div>
+										);
+								  })
+								: events.map((event, i) => {
+										return (
+											<div className="mb-3 mt-5 ">
+												<Container className="d-flex align-items-center justify-content-center">
+													<EventCard event={event} key={i} />
+												</Container>
+											</div>
+										);
+								  })}
+						</div>
+					</div>
+				</div>
+			)}
 		</div>
 	);
 }

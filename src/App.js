@@ -19,7 +19,6 @@ function App() {
 	const baseUrl = "http://localhost:3002/api/events";
 	//useState Variables
 	const [user, setUser] = useState(false);
-
 	const [userId, setUserId] = useState(false);
 	const { pathname } = useLocation();
 	const navigate = useNavigate();

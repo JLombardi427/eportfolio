@@ -6,7 +6,7 @@ function EventCard({ event }) {
 	// const { events, setEvents, user, setUser } = useContext(statesContext);
 
 	return (
-		<Card elevation={3}>
+		<Card>
 			<CardContent className="card-container">
 				<Link to={`/menu/${event.id}`}>
 					<div className="card">
