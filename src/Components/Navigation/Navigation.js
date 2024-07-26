@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { statesContext } from "../../App";
 import "./Navigation.css";
 
 function Navigation(props) {
+	const { loggedIn, handleLogout, userInfo } = useContext(statesContext);
 	return (
 		<Navbar bg="dark" expand="lg" collapseOnSelect={true}>
 			<Container className="nav-bar">
@@ -19,6 +22,33 @@ function Navigation(props) {
 					<Nav.Link as={Link} to="/about" className="text-warning">
 						About
 					</Nav.Link>
+				</Nav>
+				<Nav>
+					{userInfo && (
+						<Navbar.Text className="justify-content-end text-warning fw-bold">
+							You are signed in as: {userInfo.email}
+						</Navbar.Text>
+					)}
+					{loggedIn ? (
+						<>
+							<LinkContainer to="/">
+								<Nav.Link
+									onClick={handleLogout}
+									className="text-danger fw-bold">
+									Log Out
+								</Nav.Link>
+							</LinkContainer>
+						</>
+					) : (
+						<>
+							<LinkContainer to="/signup" className="text-warning">
+								<Nav.Link>Sign Up</Nav.Link>
+							</LinkContainer>
+							<LinkContainer to="/login" className="text-warning">
+								<Nav.Link>Log In</Nav.Link>
+							</LinkContainer>
+						</>
+					)}
 				</Nav>
 				<Link to={"/home/add"}>
 					<Button>Add An Event! </Button>
