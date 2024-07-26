@@ -19,7 +19,7 @@ function App() {
 	const baseUrl = "http://localhost:3002/api/events";
 	//useState Variables
 	const [user, setUser] = useState(false);
-	const [events, setEvents] = useState(false);
+
 	const [userId, setUserId] = useState(false);
 	const { pathname } = useLocation();
 	const navigate = useNavigate();
@@ -83,26 +83,10 @@ function App() {
 		}
 	}, []);
 
-	// Get Events api call function
-	const getEvents = async () => {
-		try {
-			const res = await axios.get(baseUrl);
-			setEvents(res.data);
-		} catch (error) {
-			console.log(error);
-		}
-	};
-
-	useEffect(() => {
-		getEvents();
-	}, []);
-
 	return (
 		<div className="App">
 			<statesContext.Provider
 				value={{
-					events,
-					setEvents,
 					user,
 					setUser,
 					loggedIn,

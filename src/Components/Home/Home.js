@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Grid, Container } from "@mui/material";
 import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
@@ -10,48 +11,65 @@ import EventCard from "../EventCard/EventCard";
 import "./Home.css";
 
 function Home() {
-	const { events, loggedIn } = useContext(statesContext);
-	const [filter, setFilter] = useState([
-		"All",
+	// URLs
+	const baseUrl = "http://localhost:3002/api/events";
+	const { loggedIn } = useContext(statesContext);
+	const [events, setEvents] = useState([]);
+	const [filterEvent, setFilterEvent] = useState("");
+
+	const [category, setCategory] = useState([
 		"Birthday",
 		"Anniversary",
-		"Other",
+		"Sporting Event",
 	]);
-	const [counter, setCounter] = useState(1);
 
-	const categoryOptions = filter.map((category) => category);
-	const handleCategoryChange = (e) => {
-		console.log(filter[e.target.value]);
+	// Get Events api call function
+	const getEvents = async () => {
+		try {
+			const res = await axios.get(baseUrl);
+			// console.log(res);
+			setEvents(res.data);
 
-		if (filter[e.target.value] === "Birthday") {
-			setCounter(2);
-			console.log(counter);
-		} else if (filter[e.target.value] === "Anniversary") {
-			setCounter(3);
-			console.log(counter);
-		} else if (filter[e.target.value] === "Other") {
-			setCounter(4);
-			console.log(counter);
-		} else {
-			setCounter(1);
-			console.log(counter);
+			// console.log(events);
+		} catch (error) {
+			console.log(error);
 		}
 	};
 
-	useEffect(() => {}, []);
+	const categoryOptions = category.map((category) => category);
+
+	const handleCategoryChange = (e) => {
+		setFilterEvent(category[e.target.value]);
+		console.log(category[e.target.value]);
+		console.log(filterEvent);
+
+		//console.log(filteredData);
+		// console.log(filterEvent);
+	};
+
+	const filteredData = events.filter((event) =>
+		event.category.includes(filterEvent)
+	);
+
+	const handleNoEvents = () => {
+		return <p>There are not events with this category yet! </p>;
+	};
+
+	useEffect(() => {
+		getEvents();
+	}, []);
 
 	return (
 		<div className="homeContainer">
 			<select onChange={(e) => handleCategoryChange(e)}>
-				<option>Select event to list...</option>
+				<option>All</option>
 				{categoryOptions.map((category, key) => (
 					<option value={key}>{category}</option>
 				))}
 			</select>
 			<div className="menu-container mt-3 animate__animated animate__slideInRight">
-				{events &&
-					events.map((event, i) => {
-						if (counter === 1)
+				{filteredData.length !== 0
+					? filteredData.map((event, i) => {
 							return (
 								<div className="mb-3 mt-5 ">
 									<Container className="d-flex align-items-center justify-content-center">
@@ -59,7 +77,16 @@ function Home() {
 									</Container>
 								</div>
 							);
-					})}
+					  })
+					: events.map((event, i) => {
+							return (
+								<div className="mb-3 mt-5 ">
+									<Container className="d-flex align-items-center justify-content-center">
+										<EventCard event={event} key={i} />
+									</Container>
+								</div>
+							);
+					  })}
 			</div>
 		</div>
 	);
