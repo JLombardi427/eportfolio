@@ -1,8 +1,14 @@
+// Justin Lombardi
+// July 27th, 2024
+// Version 2.0
+
+//Dependencies
 import "./App.css";
 import axios from "axios";
 import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 import { createContext, useState, useEffect } from "react";
 
+//Components
 import Welcome from "./Components/Welcome/Welcome";
 import Home from "./Components/Home/Home";
 import Navigation from "./Components/Navigation/Navigation";
@@ -12,11 +18,13 @@ import AddEvent from "./Components/AddEvent/AddEvent";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/SignUp/SignUp";
 
+//Export of useState to use throughout the program
 export const statesContext = createContext("");
 
 function App() {
 	// URLs
 	const baseUrl = "http://localhost:3002/api/events";
+
 	//useState Variables
 	const [user, setUser] = useState(false);
 	const [userId, setUserId] = useState(false);
@@ -31,6 +39,7 @@ function App() {
 		getUserInfo();
 		setLoggedIn(true);
 	};
+
 	// Get User Info function
 	const getUserInfo = async () => {
 		try {

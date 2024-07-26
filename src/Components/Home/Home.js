@@ -21,6 +21,7 @@ function Home() {
 		"Birthday",
 		"Anniversary",
 		"Sporting Event",
+		"Vacation",
 		"Other",
 	]);
 

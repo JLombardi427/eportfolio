@@ -81,6 +81,7 @@ function AddEvent(props) {
 							<option value="Birthday">Birthday</option>
 							<option value="Anniversary">Anniversary</option>
 							<option value="Sporting Event">Sporting Event</option>
+							<option value="Vacation ">Vacation</option>
 							<option value="Other">Other </option>
 						</select>
 					</Form.Group>
