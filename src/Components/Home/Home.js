@@ -1,13 +1,30 @@
 import React from "react";
+import { Grid, Container } from "@mui/material";
+import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { statesContext } from "../../App";
 import { Button } from "react-bootstrap";
+
+import EventCard from "../EventCard/EventCard";
 
 import "./Home.css";
 
-function Home(props) {
+function Home() {
+	const { events, loggedIn } = useContext(statesContext);
+
 	return (
 		<div className="homeContainer">
-			<div className="eventContainer">
+			<div className="menu-container mt-3 animate__animated animate__slideInRight">
+				{events &&
+					events.map((event, i) => (
+						<div className="mb-3 mt-5 ">
+							<Container className="d-flex align-items-center justify-content-center">
+								<EventCard event={event} />
+							</Container>
+						</div>
+					))}
+			</div>
+			{/* <div className="eventContainer">
 				<h2>Party in the mountains!</h2>
 				<img
 					className="home-image"
@@ -78,7 +95,7 @@ function Home(props) {
 
 					<Button className="eventButtons mt-4">Delete</Button>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
