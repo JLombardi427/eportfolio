@@ -1,9 +1,18 @@
+// Justin Lombardi
+// August 8th, 2024
+// Version 3.0
+//This component is responsible for the navigation bar on the pages.
+//This navigation bar handles login, signup, add, and the main home page
+
+//Dependencies
 import React, { useContext } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { statesContext } from "../../App";
+
+//Styling
 import "./Navigation.css";
 
 function Navigation(props) {

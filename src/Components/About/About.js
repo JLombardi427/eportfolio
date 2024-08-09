@@ -1,6 +1,14 @@
+// Justin Lombardi
+// August 8th, 2024
+// Version 3.0
+
+//This component handles the page about the developer
+
+//Dependencies
 import React, { useRef } from "react";
 import { Button } from "react-bootstrap";
 
+//Styling
 import "./About.css";
 
 function About(props) {

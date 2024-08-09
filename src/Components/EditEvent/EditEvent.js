@@ -1,3 +1,10 @@
+// Justin Lombardi
+// August 8th, 2024
+// Version 3.0
+
+//This component handles the form that will update events.
+
+//Dependencies
 import React from "react";
 import { Form, Button } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";

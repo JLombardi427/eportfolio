@@ -1,3 +1,10 @@
+// Justin Lombardi
+// August 8th, 2024
+// Version 3.0
+
+//This component handles the form that adds events to the database
+
+//Dependencies
 import { useContext } from "react";
 import { statesContext } from "../../App";
 import { Form, Button } from "react-bootstrap";

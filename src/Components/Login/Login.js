@@ -1,9 +1,17 @@
+// Justin Lombardi
+// August 8th, 2024
+// Version 3.0
+
+//This component handles the login form for the user
+
+//Dependencies
 import React, { useState, useContext } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { statesContext } from "../../App";
 // import "./Login.css";
 
+//function used to handle logging in
 function Login() {
 	const { handleSetLoggedIn } = useContext(statesContext);
 
@@ -11,6 +19,7 @@ function Login() {
 		email: "",
 		password: "",
 	};
+
 	const navigate = useNavigate();
 	const [formData, setFormData] = useState(initialFormData);
 	const [error, setError] = useState(false);

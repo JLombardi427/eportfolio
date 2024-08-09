@@ -1,22 +1,34 @@
+// Justin Lombardi
+// August 8th, 2024
+// Version 3.0
+// This component handles the main menu for the events.
+// This component also handles the filtering of the events and the categories
+
+//Dependencies
 import React, { useState } from "react";
 import axios from "axios";
-import { Grid, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { statesContext } from "../../App";
 import { Button } from "react-bootstrap";
 
+//Components
 import EventCard from "../EventCard/EventCard";
 
+//Styling
 import "./Home.css";
 
 function Home() {
 	// URLs
 	const baseUrl = "http://localhost:3002/api/events";
+
+	// constant that holds true or false whether user is logged in or not
 	const { loggedIn } = useContext(statesContext);
+
+	//State variables
 	const [events, setEvents] = useState([]);
 	const [filterEvent, setFilterEvent] = useState("");
-
 	const [category, setCategory] = useState([
 		"Birthday",
 		"Anniversary",
@@ -25,7 +37,7 @@ function Home() {
 		"Other",
 	]);
 
-	// Get Events api call function
+	// Function to get all events from the database
 	const getEvents = async () => {
 		try {
 			const res = await axios.get(baseUrl);
@@ -38,8 +50,10 @@ function Home() {
 		}
 	};
 
+	//constant that maps through the categories of events to display in the select element
 	const categoryOptions = category.map((category) => category);
 
+	//constant that handles the select element and tracks which option is selected
 	const handleCategoryChange = (e) => {
 		setFilterEvent(category[e.target.value]);
 		console.log(category[e.target.value]);
@@ -49,10 +63,12 @@ function Home() {
 		// console.log(filterEvent);
 	};
 
+	// constant that filters the events based on the category that is chosen
 	const filteredData = events.filter((event) =>
 		event.category.includes(filterEvent)
 	);
 
+	//side effect used to update events when there is a change to the category
 	useEffect(() => {
 		getEvents();
 	}, []);

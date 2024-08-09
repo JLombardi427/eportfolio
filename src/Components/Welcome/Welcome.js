@@ -1,6 +1,14 @@
+// Justin Lombardi
+// August 8th, 2024
+// Version 3.0
+
+//This component handles the landing page for all visitors
+
+//Dependencies
 import React from "react";
 import { Link } from "react-router-dom";
 
+//Styling
 import styles from "./Welcome.module.css";
 
 function Welcome(props) {

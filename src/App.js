@@ -1,6 +1,8 @@
 // Justin Lombardi
-// July 27th, 2024
-// Version 2.0
+// August 8th, 2024
+// Version 3.0
+//This is our main App.js file that handles the components and useContext web hook
+//This component also handles the logging in and out true/false variables.
 
 //Dependencies
 import "./App.css";
@@ -25,15 +27,18 @@ function App() {
 	// URLs
 	const baseUrl = "http://localhost:3002/api/events";
 
+	// constants that handle url path for conditional rendering of Navigation component
+	const { pathname } = useLocation();
+	const navigate = useNavigate();
 	//useState Variables
 	const [user, setUser] = useState(false);
 	const [userId, setUserId] = useState(false);
-	const { pathname } = useLocation();
-	const navigate = useNavigate();
 	const [loggedIn, setLoggedIn] = useState(
 		localStorage.getItem("token") ? true : false
 	);
 	const [userInfo, setUserInfo] = useState(null);
+
+	//function to handle login state true when actually logged in
 	const handleSetLoggedIn = (token) => {
 		localStorage.setItem("token", token);
 		getUserInfo();
@@ -43,7 +48,7 @@ function App() {
 	// Get User Info function
 	const getUserInfo = async () => {
 		try {
-			const response = await fetch(baseUrl + "users/me/", {
+			const response = await fetch(baseUrl + "/users/me/", {
 				headers: {
 					Authorization: `Token ${localStorage.getItem("token")}`,
 				},
@@ -84,7 +89,7 @@ function App() {
 		}
 	};
 
-	// Use Effect for getting user info
+	// Use Effect to perform a side effect of getting user info if the user is logged in
 	useEffect(() => {
 		if (loggedIn) {
 			getUserInfo();
@@ -93,6 +98,7 @@ function App() {
 
 	return (
 		<div className="App">
+			{/* useContext hook that allows the use of following variables through the program */}
 			<statesContext.Provider
 				value={{
 					user,

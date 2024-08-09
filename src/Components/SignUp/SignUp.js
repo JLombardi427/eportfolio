@@ -1,3 +1,9 @@
+// Justin Lombardi
+// August 8th, 2024
+// Version 3.0
+
+//This component handles the sign up form for new users
+//Dependencies
 import React from "react";
 import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -5,6 +11,8 @@ import { useState } from "react";
 import { useContext } from "react";
 import { statesContext } from "../../App";
 import axios from "axios";
+
+//Styling
 // import './SignUp.css';
 
 function SignUp(props) {
