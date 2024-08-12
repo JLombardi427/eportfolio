@@ -1,6 +1,8 @@
-# ePortfolio
+<center>
+  <img src="ProfilePhoto.jpeg" height=250 width=200>
+</center>
 
-## Welcome to Justin Lombardi's ePortfolio!
+# Welcome to Justin Lombardi's ePortfolio!
 
 ePortfolio for Computer Science Capstone 499 at SNHU
 
