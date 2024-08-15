@@ -8,11 +8,11 @@
 
 ## Table of Contents
 <ul>
-  <li><a href='https://github.com/JLombardi427/eportfolio/edit/main/README.md#code-review'>Code Review</a></li>
-  <li><a href='https://github.com/JLombardi427/eportfolio/edit/main/README.md#professional-self-assessment'>Professional Self-Assessment</a></li>
-  <li><a href='https://github.com/JLombardi427/eportfolio/edit/main/README.md#category-one-software-engineering--design'>Category One: Software Engineering & Design</a></li>
-  <li><a href='https://github.com/JLombardi427/eportfolio/edit/main/README.md#category-two-data-structures--algorithms'>Category Two: Data Structures & Algorithms</a></li>
-  <li><a href='https://github.com/JLombardi427/eportfolio/edit/main/README.md#category-three-databases'>Category Three: Databases</a></li>
+  <li><a href='https://github.com/JLombardi427/eportfolio/main/README.md#code-review'>Code Review</a></li>
+  <li><a href='https://github.com/JLombardi427/eportfolio/main/README.md#professional-self-assessment'>Professional Self-Assessment</a></li>
+  <li><a href='https://github.com/JLombardi427/eportfolio/main/README.md#category-one-software-engineering--design'>Category One: Software Engineering & Design</a></li>
+  <li><a href='https://github.com/JLombardi427/eportfolio/main/README.md#category-two-data-structures--algorithms'>Category Two: Data Structures & Algorithms</a></li>
+  <li><a href='https://github.com/JLombardi427/eportfolio/main/README.md#category-three-databases'>Category Three: Databases</a></li>
 </ul>
 
 ## Code Review 
