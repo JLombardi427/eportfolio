@@ -18,6 +18,7 @@
 
 ## Code Review 
 View the code review for the original artifact of this capstone <a href="https://youtu.be/wBpu8ryyRQ0" title="here!">here!</a>
+<center><a href="https://youtu.be/wBpu8ryyRQ0"><img src="CodeReviewThumbnail.png" height=300 width=500></a></center>
 
 ## Professional Self-Assessment
 
