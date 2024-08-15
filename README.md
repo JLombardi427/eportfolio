@@ -4,7 +4,7 @@
 
 # Welcome to Justin Lombardi's ePortfolio!
 
-### ePortfolio for Computer Science Capstone 499 at SNHU
+### Computer Science Capstone 499 at SNHU
 
 ## Table of Contents
 <ul>
