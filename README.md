@@ -6,10 +6,22 @@
 
 ### ePortfolio for Computer Science Capstone 499 at SNHU
 
+## Table of Contents
+<ul>
+  <li><a href='https://github.com/JLombardi427/eportfolio/edit/main/README.md#code-review'>Code Review</a></li>
+  <li><a href='https://github.com/JLombardi427/eportfolio/edit/main/README.md#professional-self-assessment'>Professional Self-Assessment</a></li>
+  <li><a href='https://github.com/JLombardi427/eportfolio/edit/main/README.md#category-one-software-engineering--design'>Category One: Software Engineering & Design</a></li>
+  <li><a href='https://github.com/JLombardi427/eportfolio/edit/main/README.md#category-two-data-structures--algorithms'>Category Two: Data Structures & Algorithms</a></li>
+  <li><a href='https://github.com/JLombardi427/eportfolio/edit/main/README.md#category-three-databases'>Category Three: Databases</a></li>
+</ul>
+
+## Code Review 
+View the code review for the original artifact of this capstone <a href="https://youtu.be/wBpu8ryyRQ0" title="here!">here!</a>
 
 ## Professional Self-Assessment
 
 Completing my coursework at SNHU and developing my ePortfolio has helped shape my professional goals and values by showing me that I’m capable of much more than I think. The assignments, projects, and discussions have all contributed to my work in this field and have helped to enhance my abilities in tough situations. The online learning environment has also been a helpful piece of this puzzle as it forced me to reach out for clarifying information, make better connections with peers, and drive the solution mindset by having to research to help solve my own problems. CS – 330 was a computational graphics course and by far one of the most challenging courses in this program as it was far from my comfort zone. I was comfortable with the language and building a full-stack application, but the content and structure for graphics was  an incredibly deep dive. However, the collaboration with my peers and the communication with my professor allowed me to gather better understanding of the weekly problems. I was able to overcome code issues, bugs, and build a deeper understanding of the content with these communications. All the support from SNHU inside and outside the classroom provided me with the resources to succeed. My goal in this program was not only to learn the hard skills of computer science, but to develop the soft skills needed to overcome discomfort in a new field and to work more efficiently with peers, professors/stakeholders, and mimic what a real-world scenario would be when applicable. I was able to see myself grow in my current career during this time because my experience here changed how I approach new topics and new challenges. I approach tasks at work with a newfound confidence and the ability to articulate the exact needs of the business and how I can solution for those needs in a more concise way. With all this in mind, the program and coursework has taught me how to take a concept, think deeply about the solution, and build a product in many ways to best solve for a problem, especially for these final enhancements.
+
 I chose one main artifact to use in this final ePortfolio to showcase my skills in Software Design & Engineering, Data Structures & Algorithms, and Databases. The artifact that was chosen for this ePortfolio to enhance was originally a mobile application built in one of my last terms from SNHU for CS – 360. The artifact is called “Calen-Dos” and is an event-tracking app that is supposed to bring a fun interaction to event planning. It was originally created in Android Studio; however, I rebuilt and enhanced the artifact by converting the idea to a browser-based, full stack application and built it using the MERN stack. I selected this item because I did like the idea behind the project, but I did not like the exact build and design idea for a mobile application. The conversion to a browser-based application will show the growth I’ve had during my time at SNHU since I built the new app with some technologies we have only briefly covered during our terms and some we have not covered at all. I wanted to challenge myself because this was a bareboned design, and there was room to elevate and scale this application. The thought behind using this artifact revolved around the fact that it lacked two of the three categories initially (algorithms and databases), so there was an opportunity to build these categories from scratch as a true enhancement. The buildout for this artifact will highlight the outcomes intended for this course because I have completed the following: 
 
 **Course Outcome One:**
@@ -30,8 +42,11 @@ I developed a security mindset that anticipated adversarial exploits in software
 <center>References:
 Le, K. (2023, April 14). Understanding time and space complexity of common JavaScript built-in methods. Medium. https://javascript.plainenglish.io/understanding-time-and-space-complexity-of-common-javascript-built-in-methods-39a3285a6409</center>
 
-## Code Review 
-View the code review for the original artifact of this capstone <a href="https://youtu.be/wBpu8ryyRQ0" title="here!">here!</a>
+## Category One: Software Engineering & Design
+
+## Category Two: Data Structures & Algorithms
+
+## Category Three: Databases
  
 
 
