@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
 // Controllers
 // Forward all requests to localhost:3002/api/events to the post controller
 app.use("/api/events", eventController);
-app.use("/api", userController);
+app.use("/api/users", userController);
 
 app.use(handleValidationErrors);
 // The catch all for handling errors

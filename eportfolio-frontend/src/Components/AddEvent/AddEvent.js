@@ -19,7 +19,7 @@ function AddEvent(props) {
 		name: "",
 		date: "",
 		time: "",
-		image: "",
+		image: "https://i.imgur.com/kxu08eF.jpg",
 		notes: "",
 		category: "",
 	};
@@ -40,9 +40,6 @@ function AddEvent(props) {
 			const res = await fetch("http://localhost:3002/api/events", {
 				method: "POST",
 				body: data,
-				headers: {
-					Authorization: `Token ${localStorage.getItem("token")}`,
-				},
 			});
 			if (res.status === 201) {
 				navigate("/home");

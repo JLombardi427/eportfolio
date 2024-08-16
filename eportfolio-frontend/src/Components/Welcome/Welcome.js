@@ -17,7 +17,7 @@ function Welcome(props) {
 			<div className={styles.welcomeFoodImg}>
 				<img
 					className={styles.welcomeImg}
-					src="https://i.imgur.com/xA3zulu.jpg"
+					src="https://i.imgur.com/Dq79MsU.jpg"
 					alt=""
 				/>
 				<h2>BIRTHDAYS</h2>
@@ -25,7 +25,7 @@ function Welcome(props) {
 			<div className={styles.welcomeExpImg}>
 				<img
 					className={styles.welcomeImg}
-					src="https://i.imgur.com/xA3zulu.jpg"
+					src="https://i.imgur.com/KzaUguF.jpg"
 					alt=""
 				/>
 				<h2>ANNIVERSARIES</h2>
@@ -33,7 +33,7 @@ function Welcome(props) {
 			<div className={styles.welcomeLikeImg}>
 				<img
 					className={styles.welcomeImg}
-					src="https://i.imgur.com/xA3zulu.jpg"
+					src="https://i.imgur.com/kxu08eF.jpg"
 					alt=""
 				/>
 				<h2>VACATIONS</h2>
@@ -41,7 +41,7 @@ function Welcome(props) {
 			<div className={styles.welcomePostImg}>
 				<img
 					className={styles.welcomeImg}
-					src="https://i.imgur.com/xA3zulu.jpg"
+					src="https://i.imgur.com/hCfAvo7.jpg"
 					alt=""
 				/>
 				<h2>ACTIVITIES</h2>

@@ -18,6 +18,15 @@ const router = express.Router();
 // 		.catch(next);
 // });
 
+router.get("/", async (req, res, next) => {
+	try {
+		const users = await User.find({});
+		res.json(users);
+	} catch (error) {
+		next(error);
+	}
+});
+
 router.post("/signup", async (req, res, next) => {
 	// wrap it in a try/catch to handle errors
 	try {
@@ -45,7 +54,7 @@ router.post("/login", async (req, res, next) => {
 		// will be caught by our error handler or send back
 		// a token that we'll in turn send to the client.
 		const token = await createUserToken(req, user);
-		res.status(200).json({ token, userId: user._id });
+		res.status(200).json({ token });
 	} catch (error) {
 		next(error);
 	}

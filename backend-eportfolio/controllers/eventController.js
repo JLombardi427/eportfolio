@@ -23,21 +23,8 @@ router.get("/", async (req, res, next) => {
 	}
 });
 
-// Get events filtered by category
-// http://localhost:3001/api/events/category
-router.get("/category/:category", async (req, res, next) => {
-	try {
-		const events = await Event.find({
-			category: `${req.params.category}`,
-		}).populate("owner");
-		res.json(events);
-	} catch (error) {
-		next(error);
-	}
-});
-
 // get one event by id
-// http://localhost:3001/api/events/id
+// http://localhost:3002/api/events/id
 router.get("/id/:id", async (req, res, next) => {
 	try {
 		const event = await Event.findById(req.params.id);
@@ -51,22 +38,9 @@ router.get("/id/:id", async (req, res, next) => {
 	}
 });
 
-// get event by user's name
-router.get("/username/:username", async (req, res, next) => {
-	try {
-		console.log(req.params.username);
-		const name = await Event.find({
-			owner: { username: `${req.params.username}` },
-		});
-		res.json(name);
-	} catch (error) {
-		next(error);
-	}
-});
-
 //create a event
-// http://localhost:3001/api/events
-router.post("/", requireToken, async (req, res, next) => {
+// http://localhost:3002/api/events
+router.post("/", async (req, res, next) => {
 	try {
 		const newEvent = await Event.create({ ...req.body, owner: req.user._id });
 		res.status(201).json(newEvent);
@@ -76,7 +50,7 @@ router.post("/", requireToken, async (req, res, next) => {
 });
 
 // update an event
-// http://localhost:3001/api/events/id
+// http://localhost:3002/api/events/id
 router.put("/id/:id", requireToken, async (req, res, next) => {
 	try {
 		const event = await Event.findById(req.params.id);
@@ -99,7 +73,7 @@ router.put("/id/:id", requireToken, async (req, res, next) => {
 });
 
 // Update: Partially edit an event
-// http://localhost:3001/api/events/id
+// http://localhost:3002/api/events/id
 router.patch("/id/:id", requireToken, async (req, res, next) => {
 	console.log(req.body);
 	try {
@@ -122,7 +96,7 @@ router.patch("/id/:id", requireToken, async (req, res, next) => {
 });
 
 // Delete: Remove a event
-// http://localhost:3001/api/events/id
+// http://localhost:3002/api/events/id
 router.delete("/id/:id", requireToken, async (req, res, next) => {
 	try {
 		const event = await Event.findById(req.params.id);

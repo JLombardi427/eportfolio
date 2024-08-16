@@ -123,20 +123,9 @@ html {
     background-color: #e29578;
 }
 
-.footerDiv {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
-    margin: 10px 0px 10px 0px;
-}
 
-.footerImg {
-    object-fit: fill;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-}
+
+
 
 .welcomeLogo {
     display: none;
@@ -206,7 +195,7 @@ html {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 300px;
+        height: 400px;
         border: 2px solid white;
         border-radius: 5px;
         padding: 10px;
@@ -239,10 +228,6 @@ html {
         grid-row: 3;
         grid-column: 4;
     }
-
-   
-
-
 
 
     .welcomeText {

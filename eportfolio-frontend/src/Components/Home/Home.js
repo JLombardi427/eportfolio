@@ -75,7 +75,7 @@ function Home() {
 
 	return (
 		<div className="homeContainer">
-			<select onChange={(e) => handleCategoryChange(e)}>
+			<select onChange={(e) => handleCategoryChange(e)} className="category">
 				{categoryOptions.map((category, key) => (
 					<option value={key}>{category}</option>
 				))}

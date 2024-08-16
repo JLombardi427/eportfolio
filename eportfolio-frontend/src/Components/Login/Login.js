@@ -34,7 +34,7 @@ function Login() {
 		event.preventDefault();
 		setError(false);
 		try {
-			const API_ENDPOINT = `http://localhost:3002/api`;
+			const API_ENDPOINT = `http://localhost:3002/api/users/login`;
 			const response = await fetch(API_ENDPOINT, {
 				method: "POST",
 				body: JSON.stringify(formData),

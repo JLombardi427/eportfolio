@@ -20,7 +20,6 @@ function SignUp(props) {
 	const signUpData = {
 		email: "",
 		password: "",
-		re_password: "",
 	};
 
 	const navigate = useNavigate();
@@ -36,27 +35,41 @@ function SignUp(props) {
 	}
 
 	async function handleSubmit(event) {
+		const tempLogin = {
+			email: signUp.email,
+			password: signUp.password,
+		};
 		try {
 			event.preventDefault();
-			// POST request for signup
-			const res = await axios.post(`http://localhost:3002/api/signup`, signUp);
-			// POST request for login to auto login after signup
-			const loginRes = await axios.post(
-				`http://localhost:3002/api/login`,
-				signUp
-			);
-			// get data from login POST request response
-			const data = loginRes.data;
-			if (data) {
-				// store values to local storage
-				window.localStorage.setItem("token", data.token);
-				window.localStorage.setItem("email", data.email);
-				window.localStorage.setItem("userId", data.userId);
-				// set state to true for conditional rendering
-				props.loggedInTrue();
+			const res = await fetch("http://localhost:3002/api/users/signup", {
+				method: "POST",
+				body: JSON.stringify(signUp),
+				headers: {
+					"Content-Type": "application/json",
+				},
+			});
+			if (res.status === 201) {
+				setSuccess(true);
+				const API_ENDPOINT = `http://localhost:3002/api/users/login`;
+				const response = await fetch(API_ENDPOINT, {
+					method: "POST",
+					body: JSON.stringify(tempLogin),
+					headers: {
+						"Content-Type": "application/json",
+					},
+				});
+				console.log(response);
+				if (response) {
+					// store values to local storage
+					const data = await response.json();
+					window.localStorage.setItem("token", data.token);
+					window.localStorage.setItem("email", data.email);
+					// set state to true for conditional rendering
+					handleSetLoggedIn(data.token);
+				}
 			}
 		} catch (error) {
-			console.log(error);
+			console.error(error);
 		}
 	}
 
@@ -97,18 +110,7 @@ function SignUp(props) {
 						onChange={handleChange}
 					/>
 				</Form.Group>
-				<Form.Group controlId="re_password" className="mb-3 w-50 main-form">
-					<Form.Label>Confirm Password: </Form.Label>
-					<Form.Control
-						required
-						type="password"
-						name="re_password"
-						placeholder="Confirm password"
-						value={signUp.confirm_password}
-						onChange={handleChange}
-						onBlur={passwordMatch}
-					/>
-				</Form.Group>
+
 				<div className="text-center">
 					<Button variant="primary" type="submit">
 						Sign Up

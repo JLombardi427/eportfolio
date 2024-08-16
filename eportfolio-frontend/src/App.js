@@ -72,21 +72,10 @@ function App() {
 	// Handle logout function
 	const handleLogout = async () => {
 		console.log(localStorage.getItem("token"));
-		try {
-			const response = await fetch(baseUrl + "token/logout/", {
-				method: "POST",
-				headers: {
-					Authorization: `Token ${localStorage.getItem("token")}`,
-				},
-			});
-			if (response.status === 204) {
-				setLoggedIn(false);
-				setUserInfo(null);
-				localStorage.removeItem("token");
-			}
-		} catch (err) {
-			console.log(err);
-		}
+
+		setLoggedIn(false);
+		setUserInfo(null);
+		localStorage.removeItem("token");
 	};
 
 	// Use Effect to perform a side effect of getting user info if the user is logged in

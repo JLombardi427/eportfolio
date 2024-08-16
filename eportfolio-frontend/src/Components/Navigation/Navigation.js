@@ -19,7 +19,7 @@ function Navigation(props) {
 	const { loggedIn, handleLogout, userInfo } = useContext(statesContext);
 	return (
 		<Navbar bg="dark" expand="lg" collapseOnSelect={true}>
-			<Container className="nav-bar">
+			<Container>
 				<Navbar.Brand as={Link} to="/home" className="nav-title">
 					<h1>Calen-Dos</h1>
 				</Navbar.Brand>
@@ -31,8 +31,7 @@ function Navigation(props) {
 					<Nav.Link as={Link} to="/about" className="text-warning">
 						About
 					</Nav.Link>
-				</Nav>
-				<Nav>
+
 					{userInfo && (
 						<Navbar.Text className="justify-content-end text-warning fw-bold">
 							You are signed in as: {userInfo.email}
@@ -60,7 +59,7 @@ function Navigation(props) {
 					)}
 				</Nav>
 				<Link to={"/home/add"}>
-					<Button>Add An Event! </Button>
+					<Button className="add-button">Add An Event! </Button>
 				</Link>
 			</Container>
 		</Navbar>

@@ -23,6 +23,10 @@ function EventCard({ event }) {
 						<div className="card-body">
 							<p className="card-text">{event.name}</p>
 						</div>
+						<div>
+							<button>Edit Event</button>
+							<button>Delete Event</button>
+						</div>
 					</div>
 				</Link>
 			</CardContent>
