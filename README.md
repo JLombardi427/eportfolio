@@ -45,6 +45,7 @@ I developed a security mindset that anticipated adversarial exploits in software
 Le, K. (2023, April 14). Understanding time and space complexity of common JavaScript built-in methods. Medium. https://javascript.plainenglish.io/understanding-time-and-space-complexity-of-common-javascript-built-in-methods-39a3285a6409</center>
 
 ## Category One: Software Engineering & Design
+Source code for the entire front end design <a href='https://github.com/JLombardi427/eportfolio/tree/main/eportfolio-frontend'>here!</a> 
 
 ## Category Two: Data Structures & Algorithms
 Component containing the filter logic with state variables <a href='https://github.com/JLombardi427/eportfolio/blob/main/eportfolio-frontend/src/Components/Home/Home.js'>here!</a>
