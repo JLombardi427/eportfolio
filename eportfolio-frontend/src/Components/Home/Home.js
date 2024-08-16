@@ -85,8 +85,8 @@ function Home() {
 			) : (
 				<div>
 					<p>{filteredData[0].category}</p>
-					<div className="cardContainer">
-						<div className="animate__animated animate__slideInRight">
+					<div>
+						<div className="cardContainer animate__animated animate__slideInRight">
 							{filteredData.length !== 0
 								? filteredData.map((event, i) => {
 										return (

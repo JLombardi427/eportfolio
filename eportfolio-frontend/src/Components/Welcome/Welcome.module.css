@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
     transition: ease all 1s;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        
 }
 
 html {
@@ -108,19 +113,19 @@ html {
 }
 
 .welcomeFoodImg {
-    background-color: #006d77;
+    background-color: purple;
 }
 
 .welcomeExpImg {
-    background-color: #83c5be;
+    background-color: purple;
 }
 
 .welcomeLikeImg {
-    background-color: #ffddd2;
+    background-color: purple;
 }
 
 .welcomePostImg {
-    background-color: #e29578;
+    background-color: purple;
 }
 
 
@@ -142,7 +147,7 @@ html {
         display: grid;
         grid-template-columns: 0.1fr 0.4fr 40px 0.4fr 0.1fr;
         grid-template-rows: 0.4fr 0.1fr 0.4fr 40px;
-        height: 100vh;
+        height: 100%;
         padding: auto;
     }
 
@@ -177,6 +182,7 @@ html {
         text-align: center;
         margin-bottom: 10px;
         font-size: 1.3rem;
+        
     }
 
     .welcomeImg {
@@ -200,16 +206,17 @@ html {
         border-radius: 5px;
         padding: 10px;
         margin: 10px 20px;
+        color: white;
     }
 
     .welcomeFoodImg {
-        background-color: #006d77;
+        background-color: purple;
         grid-row: 1;
         grid-column: 2;
     }
 
     .welcomeExpImg {
-        background-color: #83c5be;
+        background-color: purple;
         padding: 10px;
         border-radius: 3px;
         margin: 10px 20px;
@@ -218,13 +225,13 @@ html {
     }
 
     .welcomeLikeImg {
-        background-color: #ffddd2;
+        background-color: purple;
         grid-row: 3;
         grid-column: 2;
     }
 
     .welcomePostImg {
-        background-color: #e29578;
+        background-color: purple;
         grid-row: 3;
         grid-column: 4;
     }

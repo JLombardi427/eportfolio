@@ -19,6 +19,7 @@ import EditEvent from "./Components/EditEvent/EditEvent";
 import AddEvent from "./Components/AddEvent/AddEvent";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/SignUp/SignUp";
+import Footer from "./Components/Footer/Footer";
 
 //Export of useState to use throughout the program
 export const statesContext = createContext("");
@@ -110,6 +111,7 @@ function App() {
 					<Route path="/home/add" element={<AddEvent />} />
 				</Routes>
 			</statesContext.Provider>
+			<Footer></Footer>
 		</div>
 	);
 }
