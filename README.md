@@ -47,6 +47,7 @@ Le, K. (2023, April 14). Understanding time and space complexity of common JavaS
 ## Category One: Software Engineering & Design
 
 ## Category Two: Data Structures & Algorithms
+Component containing the filter logic with state variables <a href='https://github.com/JLombardi427/eportfolio/blob/main/eportfolio-frontend/src/Components/Home/Home.js'>here!</a>
 
 ## Category Three: Databases
  Repository for the backend <a href='https://github.com/JLombardi427/eportfolio/tree/main/backend-eportfolio'>here!</a>
