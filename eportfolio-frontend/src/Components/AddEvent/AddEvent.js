@@ -12,6 +12,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
 
+import "./AddEvent.css";
+
 function AddEvent(props) {
 	const { events, setEvents, user, setUser, userInfo, loggedIn } =
 		useContext(statesContext);
@@ -56,26 +58,29 @@ function AddEvent(props) {
 	return (
 		<div>
 			<h2 className="text-center text-warning mt-3">Add an Event</h2>
-			<div className="w-75 p-3 mx-auto">
-				<Form onSubmit={createEvent} encType="multipart/form-data">
-					<Form.Group controlId="name">
+			<div className="w-75 p-3 mx-auto ">
+				<Form
+					onSubmit={createEvent}
+					encType="multipart/form-data"
+					className="add-event-container">
+					<Form.Group controlId="name" className="fields">
 						<Form.Label className="text-warning">Event Name</Form.Label>
 						<Form.Control required autoFocus type="text" name="name" />
 					</Form.Group>
-					<Form.Group controlId="Date">
+					<Form.Group controlId="date" className="fields">
 						<Form.Label className="text-warning">Date</Form.Label>
-						<Form.Control type="date" name="Date" />
+						<Form.Control type="date" name="date" />
 					</Form.Group>
-					<Form.Group controlId="time">
+					<Form.Group controlId="time" className="fields">
 						<Form.Label className="text-warning">Time</Form.Label>
 						<Form.Control type="text" name="time" />
 					</Form.Group>
-					<Form.Group controlId="special_notes">
+					<Form.Group controlId="special_notes" className="fields">
 						<Form.Label className="text-warning">Special notes</Form.Label>
 						<Form.Control type="text" name="special_notes" />
 					</Form.Group>
 
-					<Form.Group controlId="category">
+					<Form.Group controlId="category" className="fields">
 						<Form.Label className="text-warning">Category</Form.Label>
 
 						<select

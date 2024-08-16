@@ -1,0 +1,20 @@
+
+
+.add-event-container {
+    display: flex;
+    flex-direction: column;
+    
+    flex-wrap: wrap;
+    margin: 10px 5px 0px 5px;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 70vh;
+
+
+
+}
+
+.fields {
+   
+    margin: 10px;
+}

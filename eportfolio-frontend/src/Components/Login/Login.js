@@ -9,7 +9,8 @@ import React, { useState, useContext } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { statesContext } from "../../App";
-// import "./Login.css";
+
+import "./Login.css";
 
 //function used to handle logging in
 function Login() {
@@ -59,8 +60,8 @@ function Login() {
 			<Form
 				className="d-flex flex-column align-items-center mt-5"
 				onSubmit={_handleLogin}>
-				<Form.Group className="mb-3 w-50 mx-auto" controlId="email">
-					<Form.Label>Email address</Form.Label>
+				<Form.Group className="mb-3 w-50 mx-auto fields" controlId="email">
+					<Form.Label className="fields">Email address:</Form.Label>
 					<Form.Control
 						type="email"
 						placeholder="Enter email"
@@ -69,8 +70,8 @@ function Login() {
 						required
 					/>
 				</Form.Group>
-				<Form.Group className="mb-3 w-50 mx-auto" controlId="password">
-					<Form.Label>Password</Form.Label>
+				<Form.Group className="mb-3 w-50 mx-auto fields" controlId="password">
+					<Form.Label className="fields">Password:</Form.Label>
 					<Form.Control
 						type="password"
 						placeholder="Password"

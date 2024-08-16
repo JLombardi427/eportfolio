@@ -13,7 +13,7 @@ import { statesContext } from "../../App";
 import axios from "axios";
 
 //Styling
-// import './SignUp.css';
+import "./SignUp.css";
 
 function SignUp(props) {
 	const { handleSetLoggedIn } = useContext(statesContext);
@@ -87,7 +87,7 @@ function SignUp(props) {
 				className="d-flex flex-column align-items-center mt-5"
 				onSubmit={handleSubmit}>
 				<Form.Group
-					className="mb-3 w-50 mx-auto main-form"
+					className="mb-3 w-50 mx-auto main-form fields"
 					controlId="formBasicEmail">
 					<Form.Label>Email address: </Form.Label>
 					<Form.Control
@@ -99,7 +99,7 @@ function SignUp(props) {
 					/>
 				</Form.Group>
 				<Form.Group
-					className="mb-3 w-50 mx-auto main-form"
+					className="mb-3 w-50 mx-auto main-form fields"
 					controlId="formBasicPassword">
 					<Form.Label>Password: </Form.Label>
 					<Form.Control

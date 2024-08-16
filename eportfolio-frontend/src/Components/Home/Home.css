@@ -1,6 +1,7 @@
 
 .homeContainer {
     width: 100%;
+  
 }
 .cardContainer {
     display: flex;
@@ -10,7 +11,8 @@
     margin: 10px 5px 0px 5px;
     border-radius: 5px;
     padding-bottom: 100px;
-    min-height: 80vh;
+    min-height: 70vh;
+   
     
 
 }

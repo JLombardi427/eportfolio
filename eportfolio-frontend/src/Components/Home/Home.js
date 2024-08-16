@@ -28,7 +28,7 @@ function Home() {
 
 	//State variables
 	const [events, setEvents] = useState([]);
-	const [filterEvent, setFilterEvent] = useState("");
+	const [filterEvent, setFilterEvent] = useState("Birthday");
 	const [category, setCategory] = useState([
 		"Birthday",
 		"Anniversary",
@@ -75,16 +75,20 @@ function Home() {
 
 	return (
 		<div className="homeContainer">
-			<select onChange={(e) => handleCategoryChange(e)} className="category">
+			<select
+				selected="selected"
+				onChange={(e) => handleCategoryChange(e)}
+				className="category">
 				{categoryOptions.map((category, key) => (
 					<option value={key}>{category}</option>
 				))}
 			</select>
 			{filteredData.length === 0 ? (
-				<p>Sorry! There are no events in this category yet! </p>
+				<p className="cardContainer">
+					Sorry! There are no events in this category yet!{" "}
+				</p>
 			) : (
 				<div>
-					<p>{filteredData[0].category}</p>
 					<div>
 						<div className="cardContainer animate__animated animate__slideInRight">
 							{filteredData.length !== 0
