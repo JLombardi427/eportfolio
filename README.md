@@ -11,9 +11,9 @@
   <li>Code Review</li>
   <li>Professional Self-Assessment</li>
   <li>Original Artifact</li>
-  <li>Enhancement One Demo: Software Engineering & Design </li>
-  <li>Enhancement Two Demo: Data Structures & Algorithms</li>
-  <li>Enhancement Three Demo: Databases</li>
+  <li>Enhancement One Demo & Narrative: Software Engineering & Design </li>
+  <li>Enhancement Two Demo & Narrative: Data Structures & Algorithms</li>
+  <li>Enhancement Three Demo & Narrative: Databases</li>
 </ul>
 
 ## Code Review 
@@ -30,7 +30,7 @@ I chose one main artifact to use in this final ePortfolio to showcase my skills 
 Source code for the original artifact <a href='https://github.com/JLombardi427/CS-360/tree/main/LombardiJustin_CS360_ProjectTwo'>here!</a> 
 <center><a href="https://github.com/JLombardi427/CS-360/tree/main/LombardiJustin_CS360_ProjectTwo"><img src="OriginalArtifact.png" height=300 width=500></a></center>
 
-## Enhancement One: Software Engineering & Design
+## Enhancement One Demo & Narrative: Software Engineering & Design
 Source code for the entire front end design <a href='https://github.com/JLombardi427/eportfolio/tree/main/eportfolio-frontend'>here!</a> 
 Course outcomes covered are One, Two, and Three. 
 > I employed strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science by building a functional app that provides a more interactive and smoother design than the original artifact. This enhanced artifact relies on React to deliver a clean, organized interface for the user so they can have a modern and crisp feel. In our course program, we have only worked with Angular, so implementing React was a new challenge that I wanted to dive into to meet our course outcome and build a collaborative environment. I also designed, developed, and delivered professional-quality oral, written, and visual communications that are coherent, technically sound, and appropriately adapted to specific audiences and contexts by providing commented and refactored source code into the enhanced artifacts. I did this by ensuring that any developer coming into this codebase could identify my intent in the functionality with these comments and organizing the code by variables, dependencies, functions, and state variables. The use of React’s various hooks allowed me to organize the components in such a way that dataflow and component layouts are succinct and efficient. I demonstrated an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals by implementing the filtering and mapping option. These functions in Javascript both use O(n) time and space complexity which can also be labeled as linear time complexity (Le, 2023). 
@@ -41,7 +41,7 @@ View the Enhancement One Demo <a href="https://youtu.be/73I5rFAYJwk" title="here
 
 
 
-## Enhancement Two: Data Structures & Algorithms
+## Enhancement Two Demo & Narrative: Data Structures & Algorithms
 Component containing the filter logic with state variables <a href='https://github.com/JLombardi427/eportfolio/blob/main/eportfolio-frontend/src/Components/Home/Home.js'>here!</a>
 Course outcomes covered are Three and Four.
 > I demonstrated an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals by implementing the filtering and mapping option. These functions in Javascript both use O(n) time and space complexity which can also be labeled as linear time complexity (Le, 2023). In this stage, I was also able to design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution while managing the trade-offs involved in design choices by leveraging React’s useState hook to load and store the data from the database and manage state variables to increase optimization and functionality. Using the state variables along with the filter and map options allowed for the use of linear time complexity while also having a function that filtered the events and triggered the change of state instead of re-rendering the entire page. I currently have some test data in the database that I was able to use for the build of the filter for the website. When you first load the Home component, you are met with all events and there is a filter where you can choose the category for your events. If you choose a category that does not have any posts in it, you are met with a message that states there are no events in that category yet. Along with the message, you will also be met with a link to the “Add Event” component, and it will bring you to the form.
@@ -51,7 +51,7 @@ View the Enhancement Two Demo <a href="https://youtu.be/JxkVdqV39sM" title="here
 
 
 
-## Enhancement Three: Databases
+## Enhancement Three Demo & Narrative: Databases
  Repository for the backend <a href='https://github.com/JLombardi427/eportfolio/tree/main/backend-eportfolio'>here!</a>
  > I employed strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science by building a functional app that provides a more interactive and smoother design than the original artifact. This enhanced artifact relies on React to deliver a clean, organized interface for the user so they can have a modern and crisp feel. In our course program, we have only worked with Angular, so implementing React was a new challenge that I wanted to dive into to meet our course outcome and build a collaborative environment. I demonstrated an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals by implementing the filtering and mapping option. These functions in Javascript both use O(n) time and space complexity which can also be labeled as linear time complexity (Le, 2023). I developed a security mindset that anticipated adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources by building a database that has user authentication and security configured. I was able to develop a backend using MongoDB, Express.js, and Node.js for the routes, models, and controllers while using npm packages such as bcrypt, passport, and json webtoken so I could build out the authentication and hashing of passwords. I started by getting the basic functionality of the database using local JSON data within the project. After I was able to seed the database and establish a connection, then it was time for me to build the routes that would allow forms to be submitted to the database. By using Postman to properly test, I have configured the routes to create, update, read, and delete events while also creating users with hashed passwords. With the backend working properly, I employed strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science by successfully calling the API from the front end and displaying the content from the database. I also designed and evaluated computing solutions that solve a given problem using algorithmic principles and computer science practices and standards by implementing the useContext hook from React, so I only have to make my API call for all events from my parent component. This allows me to drill the state variables down into other components without having to call the API on every component.
 
