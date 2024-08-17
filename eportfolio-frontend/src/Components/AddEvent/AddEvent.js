@@ -31,29 +31,25 @@ function AddEvent(props) {
 
 	function handleChange(event) {
 		setNewEvent((newEvents) => {
-			return { ...newEvents, [event.target.id]: event.target.value };
+			return { ...newEvents, [event.target.name]: event.target.value };
 		});
 	}
 
 	async function createEvent(event) {
-		event.preventDefault();
-		const data = new FormData(event.target);
+		console.log(newEvent);
 		try {
 			const res = await fetch("http://localhost:3002/api/events", {
 				method: "POST",
-				body: data,
+				body: JSON.stringify(newEvent),
+				headers: {
+					"Content-Type": "application/json",
+				},
 			});
-			if (res.status === 201) {
-				navigate("/home");
-			}
+			console.log(res);
 		} catch (error) {
 			console.error(error);
 		}
 	}
-
-	// if (!loggedIn) {
-	// 	return <Navigate to="/login" />;
-	// }
 
 	return (
 		<div>
@@ -65,34 +61,37 @@ function AddEvent(props) {
 					className="add-event-container">
 					<Form.Group controlId="name" className="fields">
 						<Form.Label className="text-warning">Event Name</Form.Label>
-						<Form.Control required autoFocus type="text" name="name" />
+						<Form.Control
+							required
+							autoFocus
+							type="text"
+							name="name"
+							onChange={handleChange}
+						/>
 					</Form.Group>
 					<Form.Group controlId="date" className="fields">
 						<Form.Label className="text-warning">Date</Form.Label>
-						<Form.Control type="date" name="date" />
+						<Form.Control type="date" name="date" onChange={handleChange} />
 					</Form.Group>
 					<Form.Group controlId="time" className="fields">
 						<Form.Label className="text-warning">Time</Form.Label>
-						<Form.Control type="text" name="time" />
+						<Form.Control type="text" name="time" onChange={handleChange} />
 					</Form.Group>
-					<Form.Group controlId="special_notes" className="fields">
+					<Form.Group controlId="notes" className="fields">
 						<Form.Label className="text-warning">Special notes</Form.Label>
-						<Form.Control type="text" name="special_notes" />
+						<Form.Control type="text" name="notes" onChange={handleChange} />
 					</Form.Group>
 
 					<Form.Group controlId="category" className="fields">
 						<Form.Label className="text-warning">Category</Form.Label>
-
-						<select
-							class="form-select form-select-sm"
-							aria-label=".form-select-sm example">
-							<option selected>Select event category</option>
+						<Form.Control as="select" name="category" onChange={handleChange}>
+							<option selected="defaultValue">Select event category</option>
 							<option value="Birthday">Birthday</option>
 							<option value="Anniversary">Anniversary</option>
 							<option value="Sporting Event">Sporting Event</option>
 							<option value="Vacation ">Vacation</option>
 							<option value="Other">Other </option>
-						</select>
+						</Form.Control>
 					</Form.Group>
 					<div className="text-center">
 						<Button className="mt-4" type="submit">

@@ -13,11 +13,11 @@ const EventSchema = new Schema({
 	image: String,
 	notes: String,
 	category: String,
-	owner: {
-		type: mongoose.Schema.Types.ObjectId,
-		ref: "User",
-		required: true,
-	},
+	// owner: {
+	// 	type: mongoose.Schema.Types.ObjectId,
+	// 	ref: "User",
+	// 	required: true,
+	// },
 });
 
 const Event = mongoose.model("Event", EventSchema);

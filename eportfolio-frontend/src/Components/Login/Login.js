@@ -44,8 +44,7 @@ function Login() {
 				},
 			});
 			if (response.status === 200) {
-				const data = await response.json();
-				handleSetLoggedIn(data.auth_token);
+				handleSetLoggedIn();
 				navigate("/home");
 			} else {
 				setError(true);

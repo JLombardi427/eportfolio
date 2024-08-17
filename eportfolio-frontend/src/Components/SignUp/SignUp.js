@@ -59,27 +59,12 @@ function SignUp(props) {
 					},
 				});
 				console.log(response);
-				if (response) {
-					// store values to local storage
-					const data = await response.json();
-					window.localStorage.setItem("token", data.token);
-					window.localStorage.setItem("email", data.email);
-					// set state to true for conditional rendering
-					handleSetLoggedIn(data.token);
-				}
+				handleSetLoggedIn();
 			}
 		} catch (error) {
 			console.error(error);
 		}
 	}
-
-	const passwordMatch = (event) => {
-		if (signUp.password !== signUp.re_password) {
-			setError(true);
-		} else {
-			setError(false);
-		}
-	};
 
 	return (
 		<div className="signup-container">

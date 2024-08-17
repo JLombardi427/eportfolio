@@ -16,7 +16,7 @@ const router = express.Router();
 //Get all events
 router.get("/", async (req, res, next) => {
 	try {
-		const events = await Event.find({}).populate("owner");
+		const events = await Event.find({});
 		res.json(events);
 	} catch (error) {
 		next(error);
@@ -25,7 +25,7 @@ router.get("/", async (req, res, next) => {
 
 // get one event by id
 // http://localhost:3002/api/events/id
-router.get("/id/:id", async (req, res, next) => {
+router.get("/:id", async (req, res, next) => {
 	try {
 		const event = await Event.findById(req.params.id);
 		if (event) {
@@ -42,7 +42,7 @@ router.get("/id/:id", async (req, res, next) => {
 // http://localhost:3002/api/events
 router.post("/", async (req, res, next) => {
 	try {
-		const newEvent = await Event.create({ ...req.body, owner: req.user._id });
+		const newEvent = await Event.create({ ...req.body });
 		res.status(201).json(newEvent);
 	} catch (error) {
 		next(error);
@@ -51,11 +51,10 @@ router.post("/", async (req, res, next) => {
 
 // update an event
 // http://localhost:3002/api/events/id
-router.put("/id/:id", requireToken, async (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
 	try {
 		const event = await Event.findById(req.params.id);
 		if (event) {
-			handleValidateOwnership(req, event);
 			const eventToUpdate = await Event.findByIdAndUpdate(
 				req.params.id,
 				{ ...req.body, owner: req.user._id },

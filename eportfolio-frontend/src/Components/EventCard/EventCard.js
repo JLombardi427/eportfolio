@@ -13,22 +13,29 @@ import "./EventCard.css";
 
 function EventCard({ event }) {
 	// const { events, setEvents, user, setUser } = useContext(statesContext);
-
+	console.log(event);
 	return (
 		<Card>
 			<CardContent className="card-container">
-				<Link to={`/home/${event.id}`}>
-					<div className="card">
-						<img className="card-img-top" src={event.image} alt={event.name} />
-						<div className="card-body">
-							<p className="card-text">{event.name}</p>
-						</div>
+				<div className="card">
+					<img className="card-img-top" src={event.image} alt={event.name} />
+					<div className="card-body">
+						<p className="card-text">{event.name}</p>
+						<p className="card-text">{event.date.split("T")[0]}</p>
+						<p className="card-text">{event.time}</p>
+						<p className="card-text">{event.notes}</p>
+					</div>
+					<Link to={`/home/${event._id}/edit`}>
 						<div>
 							<button>Edit Event</button>
+						</div>
+					</Link>
+					<Link to={`/home/${event._id}/delete`}>
+						<div>
 							<button>Delete Event</button>
 						</div>
-					</div>
-				</Link>
+					</Link>
+				</div>
 			</CardContent>
 		</Card>
 	);

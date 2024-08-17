@@ -40,9 +40,7 @@ function App() {
 	const [userInfo, setUserInfo] = useState(null);
 
 	//function to handle login state true when actually logged in
-	const handleSetLoggedIn = (token) => {
-		localStorage.setItem("token", token);
-		getUserInfo();
+	const handleSetLoggedIn = () => {
 		setLoggedIn(true);
 	};
 
@@ -105,7 +103,7 @@ function App() {
 					<Route path="/" element={<Welcome />} />
 					<Route path="/home" element={<Home />} />
 					<Route path="/about" element={<About />} />
-					<Route path="/home/edit" element={<EditEvent />} />
+					<Route path="/home/:id/edit" element={<EditEvent />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/signup" element={<SignUp />} />
 					<Route path="/home/add" element={<AddEvent />} />

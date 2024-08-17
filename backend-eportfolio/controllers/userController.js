@@ -53,8 +53,8 @@ router.post("/login", async (req, res, next) => {
 		// createUserToken will either throw an error that
 		// will be caught by our error handler or send back
 		// a token that we'll in turn send to the client.
-		const token = await createUserToken(req, user);
-		res.status(200).json({ token });
+
+		res.status(200).json();
 	} catch (error) {
 		next(error);
 	}
