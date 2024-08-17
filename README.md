@@ -50,8 +50,9 @@ Source code for the entire front end design <a href='https://github.com/JLombard
 Course outcomes covered are One, Two, and Three. 
 > I employed strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science by building a functional app that provides a more interactive and smoother design than the original artifact. This enhanced artifact relies on React to deliver a clean, organized interface for the user so they can have a modern and crisp feel. In our course program, we have only worked with Angular, so implementing React was a new challenge that I wanted to dive into to meet our course outcome and build a collaborative environment. I also designed, developed, and delivered professional-quality oral, written, and visual communications that are coherent, technically sound, and appropriately adapted to specific audiences and contexts by providing commented and refactored source code into the enhanced artifacts. I did this by ensuring that any developer coming into this codebase could identify my intent in the functionality with these comments and organizing the code by variables, dependencies, functions, and state variables. The use of React’s various hooks allowed me to organize the components in such a way that dataflow and component layouts are succinct and efficient. I demonstrated an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals by implementing the filtering and mapping option. These functions in Javascript both use O(n) time and space complexity which can also be labeled as linear time complexity (Le, 2023). 
 
+View the Enhancement Demo <a href="https://youtu.be/73I5rFAYJwk" title="here!">here!</a>
+<center><a href="https://youtu.be/73I5rFAYJwk"><img src="CalendosDemoOneThumb.png" height=300 width=500></a></center>
 
-https://github.com/user-attachments/assets/11db19ed-3989-4274-ae13-e5a8628a6eaf
 
 
 
