@@ -5,15 +5,18 @@
 //This component handles the container for the events.
 
 //Dependencies
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@mui/material";
+import { statesContext } from "../../App";
 
 //Styling
 import "./EventCard.css";
 
 function EventCard({ event }) {
-	// const { events, setEvents, user, setUser } = useContext(statesContext);
+	const { loggedIn } = useContext(statesContext);
 	console.log(event);
+
 	return (
 		<Card>
 			<CardContent className="card-container">
@@ -25,16 +28,15 @@ function EventCard({ event }) {
 						<p className="card-text">{event.time}</p>
 						<p className="card-text">{event.notes}</p>
 					</div>
-					<Link to={`/home/${event._id}/edit`}>
-						<div>
-							<button>Edit Event</button>
-						</div>
-					</Link>
-					<Link to={`/home/${event._id}/delete`}>
-						<div>
-							<button>Delete Event</button>
-						</div>
-					</Link>
+					{loggedIn ? (
+						<Link to={`/home/${event._id}/edit`}>
+							<div>
+								<button>Edit Event</button>
+							</div>
+						</Link>
+					) : (
+						<p>You must be logged in to edit this post!</p>
+					)}
 				</div>
 			</CardContent>
 		</Card>
